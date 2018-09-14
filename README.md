@@ -1,7 +1,7 @@
 Liferay Spring Portlet MVC
 ==========================
 
-A Liferay Spring Portlet MVC project template using Maven.
+Um projeto Liferay Spring  Portlet MVC usando Maven
 
 * Liferay EE 6.2.10.11 (GA1, SP710)
 * Java 1.7
@@ -9,9 +9,14 @@ A Liferay Spring Portlet MVC project template using Maven.
 * Spring Framework 4.1.5
 * Annotation-based controller configuration
 
-Usage
+Para usar (versao wirzard)
 -----
-```bash
+fazer download do programa gitkraken
+https://www.gitkraken.com/download/windows64
+
+
+
+
 $ git clone http://github.com/psvehla/liferay-spring-mvc-portlet.git
 $ cd liferay-spring-mvc-portlet
 $ mvn package

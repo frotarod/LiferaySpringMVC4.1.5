@@ -14,19 +14,24 @@
  * You should have received a copy of the GNU General Public License along with
  * liferay-spring-mvc-portlet. If not, see <http://www.gnu.org/licenses/>.
  */
-package au.com.redbarn.liferay.spring.mvc.portlet;
+package br.com.mprj.diario.oficial.controller;
+
+import br.com.mprj.diario.oficial.modelo.Modelo;
+import br.com.mprj.diario.oficial.service.ModeloService;
+import br.com.mprj.diario.oficial.service.ModeloServiceImpl;
+
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
 
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.portlet.bind.annotation.RenderMapping;
-
-import com.liferay.portal.kernel.log.Log;
-import com.liferay.portal.kernel.log.LogFactoryUtil;
 
 /**
  * Handles requests for the view mode.
@@ -37,6 +42,9 @@ public class HomeController {
 
 	private static final Log log = LogFactoryUtil.getLog(HomeController.class);
 
+	@Autowired
+	private ModeloServiceImpl modeloService; 
+	
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
@@ -49,10 +57,12 @@ public class HomeController {
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 
 		String formattedDate = dateFormat.format(date);
-
+		modeloService.exibe(new Modelo(1234, "rodrigo"));
 		model.addAttribute("serverTime", formattedDate);
-
 		return "home";
 	}
+
+	
+
 
 }
