@@ -1,80 +1,71 @@
 Liferay Spring Portlet MVC
 ==========================
 
-Um projeto Liferay Spring  Portlet MVC usando Maven
+Resumo do projeto 
+================
 
-* Liferay EE 6.2.10.11 (GA1, SP710)
-* Java 1.7
-* Portlet 2.0
-* Spring Framework 4.1.5
-* Annotation-based controller configuration
+Resumo: E um projeto de inicio rapido em java 7 utilizando JSP, JPA 2.0 e Spring 4.1. 
+um projeto template pre configurado para iniciar o desenvolvimento. 
 
-Para usar (versao wirzard)
------
-fazer download do programa gitkraken
+Requisitos do Sistema
+=====================
+
+Windows 10 (8u51 e versões posteriores)
+Windows 8.x (Desktop)
+Windows 7 SP1
+Windows Vista SP2
+Windows Server 2008 R2 SP1 (64 bits)
+Windows Server 2012 e 2012 R2 (64 bits)
+RAM: 4 GB
+Espaço em disco: 2 GB
+Processador: no mínimo, um processador Pentium 4 
+Browsers: Internet Explorer 9 e versão mais recente, Firefox
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Prinipais tecnologia do Portlet
+=====================
+Liferay EE 6.2.
+Java 1.7 JDK
+Portlet 2.0
+Spring Framework 4.1.5
+Annotation-based controller configuration
+maven 3.1.1
+hibernate 4.2.1.Final
+maiores informações acessar o arquivo xml POM.xml
+++++++++++++++++++++++++++++++++++++++++++
+
+
+Programas extras recomendados
+============================== 
+
+programa que auxilia o donwload de forma simples gitkraken
 https://www.gitkraken.com/download/windows64
+-----------------------------------------------------------
+programa console muito simples e util (fazer download da versão full)
+http://cmder.net/  
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-
-
-$ git clone http://github.com/psvehla/liferay-spring-mvc-portlet.git
-$ cd liferay-spring-mvc-portlet
-$ mvn package
-```
 
 Deploy
-------
-If you're using Liferay Portal with Tomcat, copy the war to the deploy directory.
+======
+1) para realizar o deploy da aplicação ir em debug configuration (simbolo de inseto e de cor verde) ou run configuration (simbolo verde play)
 
-```
-$ cp target/liferay-spring-mvc-portlet.war $LIFERAY_HOME/deploy/
-```
+2) coloca as configurações em Goals : clean compile install 
 
-Configuration
--------------
+ou rodar linha de comando 
+mvn clean
+mvn compile
+mvn install
 
-Default settings are Liferay EE 6.2.10.11, Java 1.7, Portlet 2.0, and Spring 4.1.  All can be configured in [pom.xml](https://github.com/psvehla/liferay-spring-mvc-portlet/pom.xml)
+3) na pasta target pegar o arquivo "liferay-spring-mvc-portlet-1.6-RELEASE.war"
+e coloar ele na pasta ...\KDI-6.2-EE\jboss-6.2-EE\deploy do seu jboss
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-```xml
-	<properties>
-		<liferay.version>6.2.10.11</liferay.version>
-		<java-version>1.7</java-version>
-		<portlet-api.version>2.0</portlet-api.version>
-		<servlet-api.version>2.5</servlet-api.version>
-		<jsp-api.version>2.2</jsp-api.version>
-		<jstl.version>1.2</jstl.version>
-		<org.springframework-version>4.1.5.RELEASE</org.springframework-version>
-		<org.aspectj-version>1.8.5</org.aspectj-version>
-		<org.slf4j-version>1.7.10</org.slf4j-version>
-	</properties>
-```
 
-Archetype
----------
 
-The main point of this project is to create a Maven archetype.
+licença 
+=======
+gratuita
+Copyright 2018 
 
-Add an entry for the archetype in: ```~/.m2/archetype-catalog.xml```
-
-```xml
-<archetype>
-  <groupId>au.com.redbarn</groupId>
-  <artifactId>liferay-spring-mvc-portlet-archetype</artifactId>
-  <version>1.6-RELEASE</version>
-  <repository>https://raw.github.com/psvehla/maven-repo/master/releases</repository>
-  <description>liferay-spring-mvc-portlet-archetype</description>
-</archetype>
-```
-
-Run the maven archetype generate command.  Follow the prompts to specify the groupId, artifactId, and version for your project.
-
-```bash
-$ mvn archetype:generate -DarchetypeCatalog=local
-```
-
-Licence
--------
-
-Copyright 2015 Red Barn Consulting
-
-Licenced under the LGPL Licence, Version 3.0: http://www.gnu.org/licenses/lgpl.html
