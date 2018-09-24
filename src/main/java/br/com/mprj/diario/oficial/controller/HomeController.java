@@ -16,10 +16,9 @@
  */
 package br.com.mprj.diario.oficial.controller;
 
-import br.com.mprj.diario.oficial.dao.SimpleUserRepository;
 import br.com.mprj.diario.oficial.dto.ModeloDTO;
 import br.com.mprj.diario.oficial.modelo.Modelo;
-import br.com.mprj.diario.oficial.service.ModeloServiceImpl;
+import br.com.mprj.diario.oficial.service.ModeloService;
 
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
@@ -47,19 +46,9 @@ public class HomeController {
 
 	private static final Log log = LogFactoryUtil.getLog(HomeController.class);
 
-/*	@Autowired
-	private ModeloServiceImpl modeloService; 
-*/	
-	/*@Autowired
-	private SimpleUserRepository modeloService; */
-
-	
 	@Autowired
-	private SimpleUserRepository modeloService; 
+	private ModeloService modeloService; 
 	
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
 	@RenderMapping
 	public String home(Locale locale, Model model) {
 
@@ -70,15 +59,20 @@ public class HomeController {
 	}	
 	
 
-	 @ActionMapping(params = "action=salvarComunicacaoCaso")
+	 @ActionMapping(params = "action=salvarForm")
 	  public void salvarComunicacao(@ModelAttribute("modeloDTO") ModeloDTO modeloDTO,
 	            ActionRequest actionRequest, ActionResponse actionResponse,
 	            Model model) throws IOException {
-		
-	        log.info("#############Calling getCustomerData##########");
-	        modeloService.save(new Modelo(147822, "novo"));
-	        System.out.println(modeloDTO.getNome());
-	    }	
+		 
+		 	modeloService.deleteAll();
+	        
+		 	modeloService.salva(modeloDTO.convertoTOModel(modeloDTO));
+	      
+	        for (Modelo modelo : modeloService.listAll()) {
+				System.out.println(modelo.getNome());
+			}
+
+	 }	
 	
 
 }

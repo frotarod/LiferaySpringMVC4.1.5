@@ -6,9 +6,6 @@ import java.io.Serializable;
 
 public class ModeloDTO implements Serializable{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -3136650007271178424L;
 
 	private Integer id;
@@ -25,7 +22,6 @@ public class ModeloDTO implements Serializable{
 
 	public ModeloDTO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Integer getId() {

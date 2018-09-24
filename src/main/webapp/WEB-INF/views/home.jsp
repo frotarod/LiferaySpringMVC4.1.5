@@ -9,12 +9,14 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 
-	<portlet:actionURL var="submitComunicacaoCasoURL"  >
-		<portlet:param name="action" value="salvarComunicacaoCaso"/>
+	<portlet:actionURL var="submitForm"  >
+		<portlet:param name="action" value="salvarForm"/>
 	</portlet:actionURL>
 
 
-<form:form method="POST" action="${submitComunicacaoCasoURL}" modelAttribute="modeloDTO" id="frmAdesao" >
+
+
+<form:form method="POST" action="${submitForm}" modelAttribute="modeloDTO" id="frmAdesao" >
 
 <form:input type="text" id="nome" path="nome"/>
 <br/>

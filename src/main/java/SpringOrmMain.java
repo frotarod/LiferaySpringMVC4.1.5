@@ -11,7 +11,7 @@ public class SpringOrmMain {
 				ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:/root-context.xml");
 				
 				ModeloServiceImpl productService = ctx.getBean(ModeloServiceImpl.class);
-				productService.exibe(new Modelo(1000,"rodrigo"));
+			//	productService.exibe(new Modelo(1000,"rodrigo"));
 				
 					
 				ctx.close();

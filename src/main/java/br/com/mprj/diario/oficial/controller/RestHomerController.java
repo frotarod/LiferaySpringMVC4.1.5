@@ -1,0 +1,32 @@
+package br.com.mprj.diario.oficial.controller;
+
+import br.com.mprj.diario.oficial.modelo.Modelo;
+import br.com.mprj.diario.oficial.service.ModeloService;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class RestHomerController {
+
+	@Autowired
+	private ModeloService service;
+	
+	
+	/**
+	 * URL to use: http://localhost:8080/liferay-spring-mvc-portlet/services/bancos
+	 * 
+	 * @return list of users as JSON
+	 */
+	@RequestMapping(value = "/bancos", method = RequestMethod.GET)
+	public ResponseEntity<List<Modelo>> bancos() {
+		return new ResponseEntity<List<Modelo>>( service.listAll(), HttpStatus.OK);
+	}
+
+}

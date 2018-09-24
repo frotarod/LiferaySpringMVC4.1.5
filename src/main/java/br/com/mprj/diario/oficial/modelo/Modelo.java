@@ -11,9 +11,6 @@ import javax.persistence.Table;
 @Table(name = "Modelo")
 public class Modelo implements Serializable{
 
-    /**
-	 * 
-	 */
 	private static final long serialVersionUID = 7763961854372386512L;
 
 
@@ -26,7 +23,6 @@ public class Modelo implements Serializable{
 	
     public Modelo() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Modelo(Integer id, String nome) {
