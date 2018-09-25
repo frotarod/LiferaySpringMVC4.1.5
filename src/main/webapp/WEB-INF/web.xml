@@ -20,4 +20,25 @@
     <servlet-name>ViewRendererServlet</servlet-name>
     <url-pattern>/WEB-INF/servlet/view</url-pattern>
   </servlet-mapping>
+  
+  
+   	<servlet>
+		<servlet-name>liferay-spring-mvc-portlet</servlet-name>
+		<servlet-class>com.liferay.portal.kernel.servlet.PortalDelegateServlet</servlet-class>
+		<init-param>
+			<param-name>servlet-class</param-name>
+			<param-value>org.springframework.web.servlet.DispatcherServlet</param-value>
+		</init-param>
+		<init-param>
+			<param-name>sub-context</param-name>
+			<param-value>liferay-rest-controller</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+    <servlet-mapping>
+        <servlet-name>liferay-spring-mvc-portlet</servlet-name>
+        <url-pattern>/services/*</url-pattern>
+    </servlet-mapping>
+  
 </web-app>

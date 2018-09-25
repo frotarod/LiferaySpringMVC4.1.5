@@ -20,12 +20,12 @@ public class RestHomerController {
 	
 	
 	/**
-	 * URL to use: http://localhost:8080/liferay-spring-mvc-portlet/services/bancos
+	 * URL to use: http://localhost:8080/liferay-spring-mvc-portlet/services/modelos
 	 * 
 	 * @return list of users as JSON
 	 */
-	@RequestMapping(value = "/bancos", method = RequestMethod.GET)
-	public ResponseEntity<List<Modelo>> bancos() {
+	@RequestMapping(value = "/modelos", method = RequestMethod.GET)
+	public ResponseEntity<List<Modelo>> modelos() {
 		return new ResponseEntity<List<Modelo>>( service.listAll(), HttpStatus.OK);
 	}
 
