@@ -1,6 +1,6 @@
-package br.com.mprj.diario.oficial.service;
+package br.com.spring.service;
 
-import br.com.mprj.diario.oficial.modelo.Modelo;
+import br.com.spring.modelo.Modelo;
 
 import java.util.List;
 

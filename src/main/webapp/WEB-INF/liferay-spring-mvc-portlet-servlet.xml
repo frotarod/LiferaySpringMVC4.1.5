@@ -8,8 +8,8 @@
 
 	<bean class="org.springframework.web.portlet.mvc.annotation.DefaultAnnotationHandlerMapping"/>
     <bean class="org.springframework.web.portlet.mvc.annotation.AnnotationMethodHandlerAdapter"/>
-	<context:component-scan base-package="br.com.mprj.diario.oficial.controller" />
-	<context:component-scan base-package="br.com.mprj.diario.oficial.service" />
+	<context:component-scan base-package="br.com.spring.controller" />
+	<context:component-scan base-package="br.com.spring.service" />
 	<mvc:annotation-driven />
 </beans>
 

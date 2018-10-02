@@ -1,4 +1,4 @@
-package br.com.mprj.diario.oficial.modelo;
+package br.com.spring.modelo;
 
 import java.io.Serializable;
 

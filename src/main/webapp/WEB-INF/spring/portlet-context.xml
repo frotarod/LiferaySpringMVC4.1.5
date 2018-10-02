@@ -12,14 +12,14 @@
 	<!-- DispatcherPortlet Context: defines this portlet's request-processing infrastructure -->
 	
 	<!-- Autodetect annotated controllers -->
-	<context:component-scan base-package="br.com.mprj.diario.oficial.controller" />
+	<context:component-scan base-package="br.com.spring.controller" />
 
  <bean  class="org.springframework.web.portlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
 
    <bean
         class="org.springframework.web.portlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
         
-        <bean id="controllerMain" class="br.com.mprj.diario.oficial.controller.HomeController"/>
+        <bean id="controllerMain" class="br.com.spring.controller.HomeController"/>
         
          <bean id="portletModeHandlerMapping" class="org.springframework.web.portlet.handler.PortletModeHandlerMapping">
         <property name="portletModeMap">

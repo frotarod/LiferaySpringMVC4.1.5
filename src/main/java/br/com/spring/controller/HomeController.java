@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU General Public License along with
  * liferay-spring-mvc-portlet. If not, see <http://www.gnu.org/licenses/>.
  */
-package br.com.mprj.diario.oficial.controller;
+package br.com.spring.controller;
 
-import br.com.mprj.diario.oficial.dto.ModeloDTO;
-import br.com.mprj.diario.oficial.modelo.Modelo;
-import br.com.mprj.diario.oficial.service.ModeloService;
+import br.com.spring.dto.ModeloDTO;
+import br.com.spring.modelo.Modelo;
+import br.com.spring.service.ModeloService;
 
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;

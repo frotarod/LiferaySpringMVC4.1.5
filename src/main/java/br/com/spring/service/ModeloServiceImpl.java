@@ -1,7 +1,7 @@
-package br.com.mprj.diario.oficial.service;
+package br.com.spring.service;
 
-import br.com.mprj.diario.oficial.dao.SimpleUserRepository;
-import br.com.mprj.diario.oficial.modelo.Modelo;
+import br.com.spring.dao.SimpleUserRepository;
+import br.com.spring.modelo.Modelo;
 
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;

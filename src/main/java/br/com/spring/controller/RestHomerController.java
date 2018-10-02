@@ -1,7 +1,7 @@
-package br.com.mprj.diario.oficial.controller;
+package br.com.spring.controller;
 
-import br.com.mprj.diario.oficial.modelo.Modelo;
-import br.com.mprj.diario.oficial.service.ModeloService;
+import br.com.spring.modelo.Modelo;
+import br.com.spring.service.ModeloService;
 
 import java.util.List;
 

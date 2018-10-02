@@ -1,7 +1,7 @@
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import br.com.mprj.diario.oficial.modelo.Modelo;
-import br.com.mprj.diario.oficial.service.ModeloServiceImpl;
+import br.com.spring.modelo.Modelo;
+import br.com.spring.service.ModeloServiceImpl;
 
 
 public class SpringOrmMain {

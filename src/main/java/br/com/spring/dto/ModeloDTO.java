@@ -1,6 +1,6 @@
-package br.com.mprj.diario.oficial.dto;
+package br.com.spring.dto;
 
-import br.com.mprj.diario.oficial.modelo.Modelo;
+import br.com.spring.modelo.Modelo;
 
 import java.io.Serializable;
 

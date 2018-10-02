@@ -1,6 +1,6 @@
-package br.com.mprj.diario.oficial.dao;
+package br.com.spring.dao;
 
-import br.com.mprj.diario.oficial.modelo.Modelo;
+import br.com.spring.modelo.Modelo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
